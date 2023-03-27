@@ -16,9 +16,9 @@
 
   <body>
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-6">
-          <h1 id="title">freeCodeCamp Survey Form</h1>
+      <div class="row justify-content-center mb-3">
+        <div class="col-6 text-center">
+          <h1 id="title">Simple Survey Form</h1>
           <p id="description">
             <i>Thank you for taking the time to help us improve the platform</i>
           </p>
@@ -29,15 +29,28 @@
           <form id="survey-form">
             <div class="mb-3">
               <label id="name-label">Name</label><br />
-              <input id="name" class="form-control" type="text" placeholder="Enter your name" required />
+              <input
+                id="name"
+                class="form-control"
+                type="text"
+                placeholder="Enter your name"
+                required
+              />
             </div>
             <div class="mb-3">
               <label id="email-label">Email</label><br />
-              <input id="email" class="form-control" type="email" placeholder="Enter your email" required />
-            </div>
-            <div>
-              <label id="number-label"><b>Age</b>(optional)</label><br />
               <input
+                id="email"
+                class="form-control"
+                type="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label id="number-label">Age(optional)</label><br />
+              <input
+                class="form-control"
                 id="number"
                 type="number"
                 placeholder="Enter your age"
@@ -45,7 +58,7 @@
                 max="100"
               />
             </div>
-            <div>
+            <div class="mb-3">
               <label>Which option best describes your current role?</label
               ><br />
               <select class="form-select" id="dropdown">
@@ -54,24 +67,72 @@
                 <option value="other">Other</option>
               </select>
             </div>
-            <div class="form-check">
+            <div class="mb-3">
               <label>Gender</label>
-              <input class="form-check-input" type="radio" name="Male" value="male" /><span>Male</span>
-              <input class="form-check-input" type="radio" name="Female" value="female" /><span>Female</span>
-              <input class="form-check-input" type="radio" name="Other" value="other" /><span>Other</span>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="male"
+                />
+                <label class="form-check-label"> Male </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="female"
+                />
+                <label class="form-check-label">Female </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  value="other"
+                /><label class="form-check-label">Other </label>
+              </div>
             </div>
-            <div class="form-check">
-              <label>What would you like to see improved? (Check all that apply)</label>
-              <input class="form-check-input" type="checkbox" name="front-end" value="front-end" /><span>Front-end Projects</span>
-              <input class="form-check-input" type="checkbox" name="back-end" value="back-end" /><span>Back-end Projects</span>
-              <input class="form-check-input" type="checkbox" name="data-visualization" value="data-visualization" /><span>Data Visualization</span>
+            <div class="mb-3">
+              <label
+                >What would you like to see improved? (Check all that
+                apply)</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="front-end"
+                  value="front-end"
+                />
+                <label class="form-check-label">Front-end Projects</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  name="back-end"
+                  value="back-end"
+                />
+                <label class="form-check-label">Back-end Projects</label>
+              </div>
             </div>
-            <div class="form-floating">
+            <div class="mb-3">
               <label>Any comments or suggestions?</label>
-              <textarea class="form-control" id="comments" name="comments" placeholder="Enter your comments here..."></textarea>
+              <textarea
+                class="form-control"
+                id="comments"
+                name="comments"
+                placeholder="Enter your comments here..."
+              ></textarea>
             </div>
-            <div>
-              <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+            <div class="d-grid">
+              <button class="btn btn-primary" type="submit" id="submit">
+                Submit
+              </button>
             </div>
           </form>
         </div>
